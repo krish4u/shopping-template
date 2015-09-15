@@ -1,0 +1,215 @@
+<html>
+<head>
+<title>Shopping App</title>
+<link href="styles/normalize.css" rel="stylesheet" />
+<link href="styles/font-awesome.css"  rel="stylesheet" />
+<link href="styles/styles.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="script/angular.min.js"></script>
+<script src="script/angular_script.js"></script>
+<script src="script/jquery-2.1.4.js"></script>
+<script src="script/jquery-script.js"></script>
+</head>
+
+<body>
+
+<header class="header">
+
+	<div class="header__menu-c">
+	    <a href="#" class="header__menu">MENU</a>
+	</div>
+
+
+	<div class="header__title-c">
+		<span class="header__title">Shoppy</span>
+		<span class="header__slogan">Bag it</span>
+	</div>
+
+
+	<div class="header__cart-c">
+		<a href="#" class="header__cart fa fa-shopping-cart">
+			<span class="header__cart-count">0</span>
+		</a>
+	</div>
+
+</header>
+
+
+<main>
+
+<div class="banner menu-h-c">
+	<h4 class="banner__title">Vegetables</h4>
+	<h6 class="banner__slogan">100% Organic and Fresh</h6>
+	<div class="menu-h">
+		<ul>
+		<li class="active">Vegetables</li>
+		<li>Snacks &amp; Biscuts</li>
+		<li>Canned &amp; Packed food </li>
+		<li>Beverages</li>
+		</ul>
+	</div>
+</div>
+
+<div class="card card-onion">
+
+	<div class="card__each">
+	<div class="card__image"></div>
+	<div class="card__info">
+		<div class="card__info-title">
+		Onion <span class="per-kg">INR <span class="per-kg__amount">80</span>(1 kg)</span>
+		</div>
+		<div class="card__info-desc">
+		  <div class="count-c">
+		    <a href="#" class="item-decrease">-</a>
+		  	<input type="text" id="add-tomato" class="count"/>
+		  	<a href="#" class="item-increase">+</a>
+		  </div>
+		  <a href="#" class="btn-add-cart">add to cart</a>
+		</div>
+	</div>
+	</div>
+
+	<div class="card__each card-tomato">
+	<div class="card__image"></div>
+	<div class="card__info">
+		<div class="card__info-title">
+			Tomato<span class="per-kg">INR <span class="per-kg__amount">80</span></span>
+		</div>
+		<div class="card__info-desc">
+		  <div class="count-c">
+		    <a href="#" class="item-decrease">-</a>
+		  	<input type="text" id="add-tomato" class="count"/>
+		  	<a href="#" class="item-increase">+</a>
+		  </div>
+		  <a href="#" class="btn-add-cart">add to cart</a>
+		</div>
+	</div>
+	</div>
+
+	<div class="card__each card-brinjal">
+	<div class="card__image"></div>
+	<div class="card__info">
+		<div class="card__info-title">
+			Brinjal<span class="per-kg">INR <span class="per-kg__amount">80</span></span>
+		</div>
+		<div class="card__info-desc">
+		  <div class="count-c">
+		    <a href="#" class="item-decrease">-</a>
+		  	<input type="text" id="add-tomato" class="count"/>
+		  	<a href="#" class="item-increase">+</a>
+		  </div>
+		  <a href="#" class="btn-add-cart">add to cart</a>
+		</div>
+	</div>
+	</div>
+
+	<div class="card__each card-carrot">
+	<div class="card__image"></div>
+	<div class="card__info">
+		<div class="card__info-title">
+			Carrot<span class="per-kg">INR <span class="per-kg__amount">80</span></span>
+		</div>
+		<div class="card__info-desc">
+		  <div class="count-c">
+		    <a href="#" class="item-decrease">-</a>
+		  	<input type="text" id="add-tomato" class="count"/>
+		  	<a href="#" class="item-increase">+</a>
+		  </div>
+		  <a href="#" class="btn-add-cart">add to cart</a>
+		</div>
+	</div>
+	</div>
+
+</div>
+</div>
+
+<!-- shopping cart section -->
+<div class="cart">
+	<div class="cart__header">
+	<p class="cart__master-amount">
+		<span>Total Amount</span>
+		<span>235.00 <sub>INR</sub></span>
+	</div>
+
+	<div class="cart__content">
+	<div class="cart__item-list">
+	<ul>
+	<li>Test Item One 
+		<span class="cart__item-amount">40<span>INR</span></span>
+		<span class="cart__item-count">
+		<span class="cart__item-count-down" ng-click="count = count + 1" ng-init="count=0">+</span>
+		<i>8</i>Kg
+		<span class="cart__item-count-up" ng-click="count = count - 1" ng-init="count=0">-</span>
+		</span>
+	</li>
+
+	<li>Test Item One 
+		<span class="cart__item-amount">40<span>INR</span></span>
+		<span class="cart__item-count">
+		<span class="cart__item-count-down">+</span>
+		<i>5</i>Kg
+		<span class="cart__item-count-up">-</span>
+		</span>
+	</li>
+
+	<li>Test Item One 
+		<span class="cart__item-amount">40<span>INR</span></span>
+		<span class="cart__item-count">
+		<span class="cart__item-count-down">+</span>
+		<i>5</i>Kg
+		<span class="cart__item-count-up">-</span>
+		</span>
+	</li>
+
+	<li>Test Item One 
+		<span class="cart__item-amount">40<span>INR</span></span>
+		<span class="cart__item-count">
+		<span class="cart__item-count-down">+</span>
+		<i>5</i>Kg
+		<span class="cart__item-count-up">-</span>
+		</span>
+	</li>
+
+	<li>Test Item One 
+		<span class="cart__item-amount">40<span>INR</span></span>
+		<span class="cart__item-count">
+		<span class="cart__item-count-down">+</span>
+		<i>5</i>Kg
+		<span class="cart__item-count-up">-</span>
+		</span>
+	</li>
+
+	<li>Test Item One 
+		<span class="cart__item-amount">40<span>INR</span></span>
+		<span class="cart__item-count">
+		<span class="cart__item-count-down">+</span>
+		<i>5</i>Kg
+		<span class="cart__item-count-up">-</span>
+		</span>
+	</li>
+
+	<li>Test Item One 
+		<span class="cart__item-amount">40<span>INR</span></span>
+		<span class="cart__item-count">
+		<span class="cart__item-count-down">+</span>
+		<i>5</i>Kg
+		<span class="cart__item-count-up">-</span>
+		</span>
+	</li>
+
+	<li>Test Item One 
+		<span class="cart__item-amount">40<span>INR</span></span>
+		<span class="cart__item-count">
+		<span class="cart__item-count-down">+</span>
+		<i>5</i>Kg
+		<span class="cart__item-count-up">-</span>
+		</span>
+	</li>
+	</ul>
+	</div>
+	</div>
+<span class="cart__trigger"></span>
+</div>
+</main>
+</body>
+</html>
